@@ -742,3 +742,73 @@ function leader(arr) {
  newArr = 	arr.slice(arr.indexOf(big));
 return newArr;	
 }
+
+
+let cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
+
+for (let i = 0; i < cities.length; i++) {}
+     
+
+
+
+const capital = (arr) => {
+  let newArr =[]
+  for (let i = 0; i < arr.length; i ++) {
+    let input  = arr[i].toLowerCase();
+    let upp = input[0].toUpperCase();
+    console.log(upp);
+    let final = input.replace(input[0], upp);
+    console.log(final)
+    newArr.push(final);
+  }
+  return newArr;
+}
+console.log(capital(['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL']))
+
+// let stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
+//                 'GNF576746573fhdg4737dh4;Greenfield',
+//                 'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',
+//                 'SYB4f65hf75f736463;Stalybridge',
+//                 'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];
+
+       
+                const station = (arr) => {
+                  let newArr =[]
+                  for (let i = 0; i < arr.length; i ++) {
+                    let input  = arr[i];
+                    let first = input.slice(0,3);
+                    console.log(first);
+                    let semi = input.slice((input.indexOf(";")+1));
+                    console.log(semi)
+                    let final = `${first} : ${semi}`
+                    console.log(final);
+                    newArr.push(final);
+                  }
+                  return newArr;
+                }
+
+
+                console.log(station(['MAN675847583748sjt567654;Manchester Piccadilly',
+                                'GNF576746573fhdg4737dh4;Greenfield',
+                                'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',
+                                'SYB4f65hf75f736463;Stalybridge',
+                                'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield']))
+
+
+
+                const fixArr  = (arr) => {
+                  let qf = arr.pop();
+                  console.log(qf);
+                let  newArr = [];
+                let myStr = "";
+                  for (let i = 0; i < arr.length; i++) {
+                   newArr.push(arr[i], `(${arr[i].indexOf(arr[i])})`)
+                   console.log(newArr);
+                   myStr = newArr.join("-");
+                  
+                  }
+                  return myStr;
+
+                }
+
+                console.log(fixArr([ "Ryu", "Ken", "Chun-Li", "Cammy", "Guile", "Sakura", "Sagat", "Juri" ]))
