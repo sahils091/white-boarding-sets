@@ -460,279 +460,285 @@
   }
 	console.log(findLargestNums([[4, 2, 7, 1], [20, 70, 40, 90], [1, 2, 0]]));
 
-	function secondLargest(arr) {
-		let sort = arr.sort((a,b)=> b - a)
-		return sort[1];
-	}
-	console.log(secondLargest([10, 40, 30, 20, 50]));
+// 	function secondLargest(arr) {
+// 		let sort = arr.sort((a,b)=> b - a)
+// 		return sort[1];
+// 	}
+// 	console.log(secondLargest([10, 40, 30, 20, 50]));
 
 	
-	//find the max possible total for 5 out of 10 given numbers;
+// 	//find the max possible total for 5 out of 10 given numbers;
 
-	function maxTotal(nums) { 
-		let counter = 0;
-		let sorted = nums.sort((a,b) => b - a)
-		for (let i=0; i < 5; i++) {
-			counter+= sorted[i];
-		}
-		return counter;
-	}
-
-
-//Write a function that takes a string as an argument and returns the left most digit in the string.
-	function leftDigit(num) {
-		let regex = /\d+/;
-		 let match = parseInt(num.match(regex));
-			return match;
-		}
-
-		//Create a function that takes any nonnegative number as an argument and return it with it's digits in descending order. Descending order is when you sort from highest to lowest.
-
-		function sortDescending(num) {
-			split = num.toString().split("").sort((a,b)=> {return b-a}).join("");
-				return Number(split);
-			}		
+// 	function maxTotal(nums) { 
+// 		let counter = 0;
+// 		let sorted = nums.sort((a,b) => b - a)
+// 		for (let i=0; i < 5; i++) {
+// 			counter+= sorted[i];
+// 		}
+// 		return counter;
+// 	}
 
 
+// //Write a function that takes a string as an argument and returns the left most digit in the string.
+// 	function leftDigit(num) {
+// 		let regex = /\d+/;
+// 		 let match = parseInt(num.match(regex));
+// 			return match;
+// 		}
+
+// 		//Create a function that takes any nonnegative number as an argument and return it with it's digits in descending order. Descending order is when you sort from highest to lowest.
+
+// 		function sortDescending(num) {
+// 			split = num.toString().split("").sort((a,b)=> {return b-a}).join("");
+// 				return Number(split);
+// 			}		
 
 
-	//Create a function that takes an array that represent a Binary Tree and a value and return true if the value is in the tree and, false otherwise.
+
+
+// 	//Create a function that takes an array that represent a Binary Tree and a value and return true if the value is in the tree and, false otherwise.
 			
-  // Use .flat() method to flatten the arrays. 
-  // could also have used the .includes() method to find the value instead of the for loop.
+//   // Use .flat() method to flatten the arrays. 
+//   // could also have used the .includes() method to find the value instead of the for loop.
 
-	function valueInTree(tree, val) {
-    let counter = 0;
-    let flat = tree.flat(Infinity);
-    console.log(flat);
-    for (let i = 0; i < flat.length; i++) {
-      console.log(flat[i], "In for Loop");
-      if (flat[i] === val) {
-        counter++;
-      }
-    }
-    if (counter > 0) {
-      return true;
-    } else {
-      return false;
-    }
-  }	
+// 	function valueInTree(tree, val) {
+//     let counter = 0;
+//     let flat = tree.flat(Infinity);
+//     console.log(flat);
+//     for (let i = 0; i < flat.length; i++) {
+//       console.log(flat[i], "In for Loop");
+//       if (flat[i] === val) {
+//         counter++;
+//       }
+//     }
+//     if (counter > 0) {
+//       return true;
+//     } else {
+//       return false;
+//     }
+//   }	
 		
-//console.log(valueInTree([3, [7, [1, null, null], [8, null, null]], [5, null, [4, null, null]]], 4));
+// //console.log(valueInTree([3, [7, [1, null, null], [8, null, null]], [5, null, [4, null, null]]], 4));
 
 
-//Create a function that takes a number as an argument and returns the highest digit in that number.
-// ... remember the spear syntax. The methods of the Math object can be used on an array of strings awe well. 
+// //Create a function that takes a number as an argument and returns the highest digit in that number.
+// // ... remember the spear syntax. The methods of the Math object can be used on an array of strings awe well. 
 
-function highestDigit(number) {
-	let highest = number.toString().split("");
-	let top = Math.max(...highest)
-	return top;
-}
+// function highestDigit(number) {
+// 	let highest = number.toString().split("");
+// 	let top = Math.max(...highest)
+// 	return top;
+// }
 
-console.log(highestDigit(7495037));
-
-
-//Given an object of the stolen items and a limit, return the difference between the total value of those items and the limit of the policy.
-//Examples
-//calculateDifference({ "baseball bat": 20 }, 5) ➞ 15
+// console.log(highestDigit(7495037));
 
 
-
-function calculateDifference(obj, limit) {
-	let counter = 0;
-	let num = Object.values(obj);
-	for (let i = 0; i < num.length; i++) {
-		if (typeof num[i] === "number") {
-			counter+=num[i]
-		}
-	}
-	let difference = counter - limit;
-	return difference
-}
-
-console.log(calculateDifference({ skate: 10, painting: 20 }, 19) );
+// //Given an object of the stolen items and a limit, return the difference between the total value of those items and the limit of the policy.
+// //Examples
+// //calculateDifference({ "baseball bat": 20 }, 5) ➞ 15
 
 
 
-//Remove vowels from the string 
+// function calculateDifference(obj, limit) {
+// 	let counter = 0;
+// 	let num = Object.values(obj);
+// 	for (let i = 0; i < num.length; i++) {
+// 		if (typeof num[i] === "number") {
+// 			counter+=num[i]
+// 		}
+// 	}
+// 	let difference = counter - limit;
+// 	return difference
+// }
 
-function removeVowels(str) {
-	let regex = /[aeiou]/gi
- return	str.replace(regex,"");
-}
+// console.log(calculateDifference({ skate: 10, painting: 20 }, 19) );
 
 
-//find mirror numbers --- palindromes
 
-function isSymmetrical(num) {
-	console.log(num);
-	let split = num.toString().split("").join("") ;
-	let splitReverse =  num.toString().split("").reverse().join("")
-	console.log(split, splitReverse) 
-	if (splitReverse === split ) {
-		return true
-	}else {
-		return false
-	}	
-}
-console.log(isSymmetrical(95559));
+// //Remove vowels from the string 
 
-//Create a function that takes two dates and returns the number of days between the first and second date.
+// function removeVowels(str) {
+// 	let regex = /[aeiou]/gi
+//  return	str.replace(regex,"");
+// }
 
-function getDays(date1, date2) {
+
+// //find mirror numbers --- palindromes
+
+// function isSymmetrical(num) {
+// 	console.log(num);
+// 	let split = num.toString().split("").join("") ;
+// 	let splitReverse =  num.toString().split("").reverse().join("")
+// 	console.log(split, splitReverse) 
+// 	if (splitReverse === split ) {
+// 		return true
+// 	}else {
+// 		return false
+// 	}	
+// }
+// console.log(isSymmetrical(95559));
+
+// //Create a function that takes two dates and returns the number of days between the first and second date.
+
+// function getDays(date1, date2) {
 	
-	let aDay = 24*60*60*1000;
-    // get a day, 24 hrs * 60 minutes* 60 seconds* 1000 miliseconds
+// 	let aDay = 24*60*60*1000;
+//     // get a day, 24 hrs * 60 minutes* 60 seconds* 1000 miliseconds
 
-	return Math.abs((date1 - date2)/aDay);
-}
+// 	return Math.abs((date1 - date2)/aDay);
+// }
 
-//Create a function that returns the number of hashes and pluses in a string.
+// //Create a function that returns the number of hashes and pluses in a string.
 
-function hashPlusCount(str) {
-	let hash = 0;
-	let plus = 0;
+// function hashPlusCount(str) {
+// 	let hash = 0;
+// 	let plus = 0;
+// 	let newArr = [];
+// 	let split = str.split("");
+//  	for (let i = 0; i < split.length; i++)	{
+// 	 if (split[i] === "#") {
+// 		 hash++
+// 	 }else if (split[i] === "+"){
+// 		 plus++
+// 	 }else if(split === "") {
+// 		 newArr.push(0,0)
+// 	 }
+//  }
+// 	newArr.push(hash, plus);
+// 	return newArr;	
+// }
+
+// // //alternate 
+// // [str.split("").filter(x => x == "#").length,str.split("").filter(x => x == "+").length];
+
+
+
+// //Create a function that takes an array of numbers and returns the mean (average) of all those numbers.
+
+// function mean(arr) {
+	
+// 	let length = arr.length;
+// 	console.log(length);
+// 	let reduce = arr.reduce((a,b)=> {return a+b});
+// 	console.log(reduce);
+// 	let mean = reduce / length;
+// 	return Number(mean.toFixed(2));
+// }
+
+
+// function isRepdigit(num) {
+//   let counter = 0;
+//   let number = num.toString().split("");
+//   for (let i = 0; i < number.length; i++) {
+//     if (Number(number.join("")) < 0) {
+//       return false;
+//     } else if (Number(number.join("")) === 0) {
+//       return true;
+//     } else if (number[0] !== number[i]) {
+//       counter++;
+//     }
+//   }
+//   if (counter > 0) {
+//     return false;
+//   } else {
+//     return true;
+//   }
+// }
+// console.log(isRepdigit(6661))
+
+// //count number of digits 
+// function count(n) {
+//   let newArr = [];
+//   let num = n.toString().split("");
+
+//   for (let i = 0; i < num.length; i++) {
+//     if (num[i] !== "-") {
+//       newArr.push(num[i]);
+//     }
+//   }
+//   return newArr.length;
+// }
+
+// console.log(count(-314890));
+
+// // find tetrahedral numbers when n is given
+
+// function tetra(n) {
+// 	return (n * (n + 1) * (n + 2)) / 6;
+// }
+
+
+// function inkLevels(inks) {
+// let newArr = Object.values(inks);
+// return Math.min(...newArr)
+// }
+
+// console.log(inkLevels(
+// 	{
+// 	"cyan": 23,
+// 	"magenta": 12,
+// 	"yellow": 10
+//   }
+//   ))
+
+
+//   //A snail goes up the stairs. Every step, he must go up the step, then go across to the next step. He wants to reach the top of the tower.
+
+// //Write a function that returns the distance the snail must travel to the top of the tower given the height and length of each step and the height of the tower.
+
+// function totalDistance(height, length, tower) {
+// 	let numSteps = (tower / height);
+// 	console.log(numSteps)
+// 	let distance = ((height * numSteps ) + ( numSteps * length));
+// 	console.log(distance);
+// 	return Number(distance.toFixed(1));	
+// 	}
+
+
+// console.log(totalDistance(0.2, 0.4, 100.0));
+
+
+
+// //Create a function that returns the number of decimal places a number (given as a string) has. Any zeros after the decimal point count towards the number of decimal places.
+// function getDecimalPlaces(num) {
+// 	let split = num.split("");
+// 	console.log(split);
+// 	 if (num.includes(".")) {
+// 		let newArr = split.slice(split.indexOf("."));
+// 		 return  (newArr.length - 1)
+// 	 }else {
+// 		 return 0
+// 	 }
+// }
+
+// console.log(getDecimalPlaces("21.215464564"));
+
+
+// //Create a function that determines whether an input value is omnipresent for a given array.
+
+// function isOmnipresent(arr, val) {
+//   console.log(arr, val, "Hello!");
+//   let newArr = arr.filter((x) => {
+//     console.log(x);
+//     return x.includes(val);
+//   });
+//   console.log(newArr);
+//   if (arr.length === newArr.length) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+// 	console.log(isOmnipresent([[1, 1], [1, 3], [5, 1], [6, 1]], 6))
+
+
+
+
+function leader(arr) {
 	let newArr = [];
-	let split = str.split("");
- 	for (let i = 0; i < split.length; i++)	{
-	 if (split[i] === "#") {
-		 hash++
-	 }else if (split[i] === "+"){
-		 plus++
-	 }else if(split === "") {
-		 newArr.push(0,0)
-	 }
- }
-	newArr.push(hash, plus);
-	return newArr;	
+	console.log(arr);
+	let big = Math.max(...arr);
+ newArr = 	arr.slice(arr.indexOf(big));
+return newArr;	
 }
-
-// //alternate 
-// [str.split("").filter(x => x == "#").length,str.split("").filter(x => x == "+").length];
-
-
-
-//Create a function that takes an array of numbers and returns the mean (average) of all those numbers.
-
-function mean(arr) {
-	
-	let length = arr.length;
-	console.log(length);
-	let reduce = arr.reduce((a,b)=> {return a+b});
-	console.log(reduce);
-	let mean = reduce / length;
-	return Number(mean.toFixed(2));
-}
-
-
-function isRepdigit(num) {
-  let counter = 0;
-  let number = num.toString().split("");
-  for (let i = 0; i < number.length; i++) {
-    if (Number(number.join("")) < 0) {
-      return false;
-    } else if (Number(number.join("")) === 0) {
-      return true;
-    } else if (number[0] !== number[i]) {
-      counter++;
-    }
-  }
-  if (counter > 0) {
-    return false;
-  } else {
-    return true;
-  }
-}
-console.log(isRepdigit(6661))
-
-//count number of digits 
-function count(n) {
-  let newArr = [];
-  let num = n.toString().split("");
-
-  for (let i = 0; i < num.length; i++) {
-    if (num[i] !== "-") {
-      newArr.push(num[i]);
-    }
-  }
-  return newArr.length;
-}
-
-console.log(count(-314890));
-
-// find tetrahedral numbers when n is given
-
-function tetra(n) {
-	return (n * (n + 1) * (n + 2)) / 6;
-}
-
-
-function inkLevels(inks) {
-let newArr = Object.values(inks);
-return Math.min(...newArr)
-}
-
-console.log(inkLevels(
-	{
-	"cyan": 23,
-	"magenta": 12,
-	"yellow": 10
-  }
-  ))
-
-
-  //A snail goes up the stairs. Every step, he must go up the step, then go across to the next step. He wants to reach the top of the tower.
-
-//Write a function that returns the distance the snail must travel to the top of the tower given the height and length of each step and the height of the tower.
-
-function totalDistance(height, length, tower) {
-	let numSteps = (tower / height);
-	console.log(numSteps)
-	let distance = ((height * numSteps ) + ( numSteps * length));
-	console.log(distance);
-	return Number(distance.toFixed(1));	
-	}
-
-
-console.log(totalDistance(0.2, 0.4, 100.0));
-
-
-
-//Create a function that returns the number of decimal places a number (given as a string) has. Any zeros after the decimal point count towards the number of decimal places.
-function getDecimalPlaces(num) {
-	let split = num.split("");
-	console.log(split);
-	 if (num.includes(".")) {
-		let newArr = split.slice(split.indexOf("."));
-		 return  (newArr.length - 1)
-	 }else {
-		 return 0
-	 }
-}
-
-console.log(getDecimalPlaces("21.215464564"));
-
-
-//Create a function that determines whether an input value is omnipresent for a given array.
-
-function isOmnipresent(arr, val) {
-  console.log(arr, val, "Hello!");
-  let newArr = arr.filter((x) => {
-    console.log(x);
-    return x.includes(val);
-  });
-  console.log(newArr);
-  if (arr.length === newArr.length) {
-    return true;
-  } else {
-    return false;
-  }
-}
-
-	console.log(isOmnipresent([[1, 1], [1, 3], [5, 1], [6, 1]], 6))
-
-
-
-
-	
