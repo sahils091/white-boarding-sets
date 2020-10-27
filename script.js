@@ -14,7 +14,6 @@
 // a||b
 // console.log(a||b);
 
-
 // a&&b;
 // console.log(a&&b);
 
@@ -61,7 +60,6 @@
 
 // console.log(typeof(undefinedValue));
 
-
 // function addNumber(a,b){
 //     return a + b;
 // }
@@ -70,7 +68,6 @@
 
 // addNumber(17,25);
 // console.log(addNumber(17,25));
-
 
 // console.log('===Control Flow====');
 
@@ -85,18 +82,14 @@
 //     console.log('Hola, buenas noches!!');
 // }
 
-
-
-
 // let range = (a, b) => {
 //  let newArr = [];
 //  for (let i = a; i <=b; i++) {
- 
 
 //      newArr.push(i);
 
 //  }
-//  return newArr 
+//  return newArr
 // }
 // console.log(range(1,10));
 
@@ -108,13 +101,9 @@
 //     }
 //     return counter;
 
-
 // }
 
-
 // console.log(sumNum(range(1,10)));
-
-
 
 // function isPotentialFriend(set1, set2) {
 //     var length;
@@ -154,26 +143,20 @@
 //          }
 //      }
 
-    
-
-
 //  console.log( isPotentialFriend( ["sports", "music", "chess"],
-//  ["coding", "music", "netflix", "chess"])); 
+//  ["coding", "music", "netflix", "chess"]));
 //  console.log(isPotentialFriend(  ["cycling", "technology", "drawing", "doctor", "abc", "Xyz", "LSM"],
 //  ["dancing", "drawing","doctor"]))
-
-
 
 //  isPotentialFriend(
 //     ["history"],
 //     ["history"]
-//   ) 
-
+//   )
 
 // var reverse = function (x) {
 //     var minRange = Math.pow(-2, 31)
 //     var maxRange = Math.pow(2, 31) - 1
-  
+
 //     var isNegative = false;
 //     if (x < 0) {
 //       isNegative = true;
@@ -186,39 +169,35 @@
 //     } else {
 //       return result;
 //     }
-  
-//   };
 
+//   };
 
 // console.log(reverse(01235654))
 
-
 // function reverse(bool) {
 // 	if (bool === true) {
-// 		return false 
+// 		return false
 // 	}else if (bool === false) {
 // 		return true
 // 	}else {
 // 		return "boolean expected"
-		
+
 // 	}
-	
+
 // }
 
 // console.log(reverse(0));
 
 // function smallerNum(n1, n2) {
 
-//  return Math.min(n1,n2); 
-	
+//  return Math.min(n1,n2);
 
 // }
 // console.log(smallerNum('1','2'));
 
-
 // function redundant(str) {
 // return () => str
-	
+
 // }
 
 // console.log(redundant('Hello'))
@@ -234,15 +213,13 @@
 // }
 // console.log(evenArr([5,8,2,1,5,7,3,4,5,8,1,2,4,8,3,1,4,5]));
 
-
 // const trianglePat = (arr) => {
 //     let str = "*";
 //     for  (let i = 1; i < arr; i++) {
 //        console.log(str.repeat(i))
-//     } 
+//     }
 // }
 // trianglePat(5);
-
 
 // const div = document.createElement('div');
 
@@ -256,9 +233,6 @@
 // // let's see how our div object looks like
 // console.log(div);
 
-
-
-
 // function charCount(myChar, str) {
 //     let counter = 0;
 //     console.log("THe target",myChar);
@@ -270,32 +244,23 @@
 // 		}
 // 	}
 // 	return counter;
-	
+
 // }
 
 // console.log(charCount('b', 'big fat bubble'));
 
-
 // function sortByLength(arr) {
 // 	return arr.sort((a,b)=> {
-// 		return a.length - b.length   
+// 		return a.length - b.length
 //  	});
-	
+
 // };
-
-
-
-
-
 
 // const str = (s) => {
 //      console.log(s.split(" "));
 // }
 
-
 // str("big fat bubble");
-
-
 
 // function bomb(str) {
 //     console.log(str)
@@ -312,7 +277,6 @@
 
 // console.log(bomb("There is a boMb."));
 
-
 // const printPatterns = (a)=> {
 // 	console.log(a);
 // 	for (let i =1; i<=a; i++) {
@@ -327,15 +291,12 @@
 // 	}
 // }
 
-
 // console.log(printPatterns(6));
-
-
 
 // function sevenBoom(arr) {
 
 // let ifSeven = arr.filter(num => num === 7)
-	
+
 // if (ifSeven.length > 0 ){
 // 	return "Boom"
 // }else {
@@ -344,8 +305,6 @@
 // }
 
 // console.log(sevenBoom([1, 2, 3, 4, 5, 6, 	]))
-
-
 
 // function doubleChar(str) {
 // let split = str.split('');
@@ -362,8 +321,6 @@
 
 // console.log(doubleChar('hello'))
 
-
-
 // function getAbsSum(arr) {
 // 	let counter = 0;
 // 	for (let i = 0; i < arr.length; i++ ) {
@@ -376,8 +333,6 @@
 
 // console.log(getAbsSum([2, -1, 4, 8, 10]))
 
-
-
 // function sortByLength(arr) {
 // 	let newArr = arr.sort((a,b)=> {
 // 	return	a.length - b.length
@@ -385,9 +340,7 @@
 // 	return newArr
 // }
 
-
 // console.log(sortByLength(["Google", "Apple", "Microsoft"]));
-
 
 // function largestSwap(num) {
 // 	let newNum  = num.toString().split('').reverse().join('');
@@ -402,8 +355,6 @@
 
 // console.log(largestSwap(42));
 
-
-
 // function remove_abc(str) {
 // 	let regEx = /[a,b,c]/g;
 // 	let newStr =  str.replace(regEx, '');
@@ -416,8 +367,6 @@
 // }
 
 // console.log(remove_abc("this might be hard"));
-
-
 
 // function isAvgWhole(arr) {
 //   console.log(arr);
@@ -437,7 +386,7 @@
 
 // console.log(isAvgWhole([1, 1, 1, 1]))
 
-// //this function returns a new array with the two values from the first and the second inputs, 
+// //this function returns a new array with the two values from the first and the second inputs,
 // function zipIt(women, men) {
 
 // 		 if (women.length !== men.length) {
@@ -446,19 +395,24 @@
 // 		return	women.map((woman, index)=>{woman, men[index]})
 // 		}
 // 		return newArr;
-		
-		
+
 // 	}
 
-	function findLargestNums(arr) {
-    console.log(arr);
-    let bigArr = arr.map((num, i) => {
-      return Math.max(...num);
-    });
-    console.log(bigArr);
-    return bigArr;
-  }
-	console.log(findLargestNums([[4, 2, 7, 1], [20, 70, 40, 90], [1, 2, 0]]));
+function findLargestNums(arr) {
+  console.log(arr);
+  let bigArr = arr.map((num, i) => {
+    return Math.max(...num);
+  });
+  console.log(bigArr);
+  return bigArr;
+}
+console.log(
+  findLargestNums([
+    [4, 2, 7, 1],
+    [20, 70, 40, 90],
+    [1, 2, 0],
+  ])
+);
 
 // 	function secondLargest(arr) {
 // 		let sort = arr.sort((a,b)=> b - a)
@@ -466,10 +420,9 @@
 // 	}
 // 	console.log(secondLargest([10, 40, 30, 20, 50]));
 
-	
 // 	//find the max possible total for 5 out of 10 given numbers;
 
-// 	function maxTotal(nums) { 
+// 	function maxTotal(nums) {
 // 		let counter = 0;
 // 		let sorted = nums.sort((a,b) => b - a)
 // 		for (let i=0; i < 5; i++) {
@@ -477,7 +430,6 @@
 // 		}
 // 		return counter;
 // 	}
-
 
 // //Write a function that takes a string as an argument and returns the left most digit in the string.
 // 	function leftDigit(num) {
@@ -491,14 +443,11 @@
 // 		function sortDescending(num) {
 // 			split = num.toString().split("").sort((a,b)=> {return b-a}).join("");
 // 				return Number(split);
-// 			}		
-
-
-
+// 			}
 
 // 	//Create a function that takes an array that represent a Binary Tree and a value and return true if the value is in the tree and, false otherwise.
-			
-//   // Use .flat() method to flatten the arrays. 
+
+//   // Use .flat() method to flatten the arrays.
 //   // could also have used the .includes() method to find the value instead of the for loop.
 
 // 	function valueInTree(tree, val) {
@@ -516,13 +465,12 @@
 //     } else {
 //       return false;
 //     }
-//   }	
-		
+//   }
+
 // //console.log(valueInTree([3, [7, [1, null, null], [8, null, null]], [5, null, [4, null, null]]], 4));
 
-
 // //Create a function that takes a number as an argument and returns the highest digit in that number.
-// // ... remember the spear syntax. The methods of the Math object can be used on an array of strings awe well. 
+// // ... remember the spear syntax. The methods of the Math object can be used on an array of strings awe well.
 
 // function highestDigit(number) {
 // 	let highest = number.toString().split("");
@@ -532,12 +480,9 @@
 
 // console.log(highestDigit(7495037));
 
-
 // //Given an object of the stolen items and a limit, return the difference between the total value of those items and the limit of the policy.
 // //Examples
 // //calculateDifference({ "baseball bat": 20 }, 5) ➞ 15
-
-
 
 // function calculateDifference(obj, limit) {
 // 	let counter = 0;
@@ -553,15 +498,12 @@
 
 // console.log(calculateDifference({ skate: 10, painting: 20 }, 19) );
 
-
-
-// //Remove vowels from the string 
+// //Remove vowels from the string
 
 // function removeVowels(str) {
 // 	let regex = /[aeiou]/gi
 //  return	str.replace(regex,"");
 // }
-
 
 // //find mirror numbers --- palindromes
 
@@ -569,19 +511,19 @@
 // 	console.log(num);
 // 	let split = num.toString().split("").join("") ;
 // 	let splitReverse =  num.toString().split("").reverse().join("")
-// 	console.log(split, splitReverse) 
+// 	console.log(split, splitReverse)
 // 	if (splitReverse === split ) {
 // 		return true
 // 	}else {
 // 		return false
-// 	}	
+// 	}
 // }
 // console.log(isSymmetrical(95559));
 
 // //Create a function that takes two dates and returns the number of days between the first and second date.
 
 // function getDays(date1, date2) {
-	
+
 // 	let aDay = 24*60*60*1000;
 //     // get a day, 24 hrs * 60 minutes* 60 seconds* 1000 miliseconds
 
@@ -605,18 +547,16 @@
 // 	 }
 //  }
 // 	newArr.push(hash, plus);
-// 	return newArr;	
+// 	return newArr;
 // }
 
-// // //alternate 
+// // //alternate
 // // [str.split("").filter(x => x == "#").length,str.split("").filter(x => x == "+").length];
-
-
 
 // //Create a function that takes an array of numbers and returns the mean (average) of all those numbers.
 
 // function mean(arr) {
-	
+
 // 	let length = arr.length;
 // 	console.log(length);
 // 	let reduce = arr.reduce((a,b)=> {return a+b});
@@ -624,7 +564,6 @@
 // 	let mean = reduce / length;
 // 	return Number(mean.toFixed(2));
 // }
-
 
 // function isRepdigit(num) {
 //   let counter = 0;
@@ -646,7 +585,7 @@
 // }
 // console.log(isRepdigit(6661))
 
-// //count number of digits 
+// //count number of digits
 // function count(n) {
 //   let newArr = [];
 //   let num = n.toString().split("");
@@ -667,7 +606,6 @@
 // 	return (n * (n + 1) * (n + 2)) / 6;
 // }
 
-
 // function inkLevels(inks) {
 // let newArr = Object.values(inks);
 // return Math.min(...newArr)
@@ -681,7 +619,6 @@
 //   }
 //   ))
 
-
 //   //A snail goes up the stairs. Every step, he must go up the step, then go across to the next step. He wants to reach the top of the tower.
 
 // //Write a function that returns the distance the snail must travel to the top of the tower given the height and length of each step and the height of the tower.
@@ -691,13 +628,10 @@
 // 	console.log(numSteps)
 // 	let distance = ((height * numSteps ) + ( numSteps * length));
 // 	console.log(distance);
-// 	return Number(distance.toFixed(1));	
+// 	return Number(distance.toFixed(1));
 // 	}
 
-
 // console.log(totalDistance(0.2, 0.4, 100.0));
-
-
 
 // //Create a function that returns the number of decimal places a number (given as a string) has. Any zeros after the decimal point count towards the number of decimal places.
 // function getDecimalPlaces(num) {
@@ -712,7 +646,6 @@
 // }
 
 // console.log(getDecimalPlaces("21.215464564"));
-
 
 // //Create a function that determines whether an input value is omnipresent for a given array.
 
@@ -732,38 +665,31 @@
 
 // 	console.log(isOmnipresent([[1, 1], [1, 3], [5, 1], [6, 1]], 6))
 
-
-
-
 function leader(arr) {
-	let newArr = [];
-	console.log(arr);
-	let big = Math.max(...arr);
- newArr = 	arr.slice(arr.indexOf(big));
-return newArr;	
+  let newArr = [];
+  console.log(arr);
+  let big = Math.max(...arr);
+  newArr = arr.slice(arr.indexOf(big));
+  return newArr;
 }
 
-
-let cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
+let cities = ["lonDon", "ManCHESTer", "BiRmiNGHAM", "liVERpoOL"];
 
 for (let i = 0; i < cities.length; i++) {}
-     
-
-
 
 const capital = (arr) => {
-  let newArr =[]
-  for (let i = 0; i < arr.length; i ++) {
-    let input  = arr[i].toLowerCase();
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    let input = arr[i].toLowerCase();
     let upp = input[0].toUpperCase();
     console.log(upp);
     let final = input.replace(input[0], upp);
-    console.log(final)
+    console.log(final);
     newArr.push(final);
   }
   return newArr;
-}
-console.log(capital(['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL']))
+};
+console.log(capital(["lonDon", "ManCHESTer", "BiRmiNGHAM", "liVERpoOL"]));
 
 // let stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
 //                 'GNF576746573fhdg4737dh4;Greenfield',
@@ -771,44 +697,63 @@ console.log(capital(['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL']))
 //                 'SYB4f65hf75f736463;Stalybridge',
 //                 'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];
 
-       
-                const station = (arr) => {
-                  let newArr =[]
-                  for (let i = 0; i < arr.length; i ++) {
-                    let input  = arr[i];
-                    let first = input.slice(0,3);
-                    console.log(first);
-                    let semi = input.slice((input.indexOf(";")+1));
-                    console.log(semi)
-                    let final = `${first} : ${semi}`
-                    console.log(final);
-                    newArr.push(final);
-                  }
-                  return newArr;
-                }
+// const station = (arr) => {
+//   let newArr =[]
+//   for (let i = 0; i < arr.length; i ++) {
+//     let input  = arr[i];
+//     let first = input.slice(0,3);
+//     console.log(first);
+//     let semi = input.slice((input.indexOf(";")+1));
+//     console.log(semi)
+//     let final = `${first} : ${semi}`
+//     console.log(final);
+//     newArr.push(final);
+//   }
+//   return newArr;
+// }
 
+// console.log(station(['MAN675847583748sjt567654;Manchester Piccadilly',
+//                 'GNF576746573fhdg4737dh4;Greenfield',
+//                 'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',
+//                 'SYB4f65hf75f736463;Stalybridge',
+//                 'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield']))
 
-                console.log(station(['MAN675847583748sjt567654;Manchester Piccadilly',
-                                'GNF576746573fhdg4737dh4;Greenfield',
-                                'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',
-                                'SYB4f65hf75f736463;Stalybridge',
-                                'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield']))
+// const fixArr  = (arr) => {
+//   let qf = arr.pop();
+//   console.log(qf);
+// let  newArr = [];
+// let myStr = "";
+//   for (let i = 0; i < arr.length; i++) {
+//    newArr.push(arr[i], `(${arr[i].indexOf(arr[i])})`)
+//    console.log(newArr);
+//    myStr = newArr.join("-");
 
+//   }
+//   return myStr;
 
+// }
 
-                const fixArr  = (arr) => {
-                  let qf = arr.pop();
-                  console.log(qf);
-                let  newArr = [];
-                let myStr = "";
-                  for (let i = 0; i < arr.length; i++) {
-                   newArr.push(arr[i], `(${arr[i].indexOf(arr[i])})`)
-                   console.log(newArr);
-                   myStr = newArr.join("-");
-                  
-                  }
-                  return myStr;
+// console.log(fixArr([ "Ryu", "Ken", "Chun-Li", "Cammy", "Guile", "Sakura", "Sagat", "Juri" ]))
 
-                }
+// function lineLength(x, y) {
+//   let finalX = Math.pow((x[0] - x[1]),2);
+//   let finalY = Math.pow((y[0] - y[1]),2);
+//   console.log(finalX, finalY)
+//   let distance = Math.sqrt((finalX) + (finalY));
+//   let final  = Number(distance.toFixed(2));
+//   return final;
+// }
 
-                console.log(fixArr([ "Ryu", "Ken", "Chun-Li", "Cammy", "Guile", "Sakura", "Sagat", "Juri" ]))
+// console.log(lineLength([15, 7], [22, 11]));
+
+// function shiftToLeft(x, y) {
+//   console.log(x);
+//   let a = y ** y;
+//   console.log(a);
+//   let shift = x * a;
+
+//   console.log(shift);
+//   return shift;
+// }
+
+// console.log(shiftToLeft([46, 6]));
