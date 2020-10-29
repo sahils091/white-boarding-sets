@@ -768,3 +768,14 @@ function sortDrinkByPrice(drinks) {
 		return sorted;	
 }
 
+// Converting between two data types
+
+function toArray(num) {
+	let split = num.toString().split("").map(a => Number(a));
+	return (split);	
+}
+
+function toNumber(arr) {
+	let join = arr.join("")
+	return Number(join);
+}
