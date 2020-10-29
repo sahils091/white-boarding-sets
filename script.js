@@ -757,3 +757,14 @@ console.log(capital(["lonDon", "ManCHESTer", "BiRmiNGHAM", "liVERpoOL"]));
 // }
 
 // console.log(shiftToLeft([46, 6]));
+
+
+// create a functions that sorts according to one of the properties of an object.
+
+function sortDrinkByPrice(drinks) {
+	let sorted  = drinks.sort((a,b)=> {
+		return a.price-b.price
+	})
+		return sorted;	
+}
+
