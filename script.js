@@ -761,21 +761,36 @@ console.log(capital(["lonDon", "ManCHESTer", "BiRmiNGHAM", "liVERpoOL"]));
 
 // create a functions that sorts according to one of the properties of an object.
 
-function sortDrinkByPrice(drinks) {
-	let sorted  = drinks.sort((a,b)=> {
-		return a.price-b.price
+// function sortDrinkByPrice(drinks) {
+// 	let sorted  = drinks.sort((a,b)=> {
+// 		return a.price-b.price
+// 	})
+// 		return sorted;	
+// }
+
+// // Converting between two data types
+
+// function toArray(num) {
+// 	let split = num.toString().split("").map(a => Number(a));
+// 	return (split);	
+// }
+
+// function toNumber(arr) {
+// 	let join = arr.join("")
+// 	return Number(join);
+// }
+
+//Create a function that, given an array similar to the above, sorts the array according to the "content of the elements".
+
+function sortIt(arr) {
+	let newArr = arr.sort((a,b)=> {
+		return (a - b)
 	})
-		return sorted;	
+	return newArr.map(a => a);
 }
 
-// Converting between two data types
-
-function toArray(num) {
-	let split = num.toString().split("").map(a => Number(a));
-	return (split);	
-}
-
-function toNumber(arr) {
-	let join = arr.join("")
-	return Number(join);
+//Create a function to convert an array of percentages to their decimal equivalents.
+function convertToDecimal(perc) {
+	let newArr = perc.map(a => (parseFloat(a)/100));
+	return newArr;
 }
