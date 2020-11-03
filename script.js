@@ -782,21 +782,37 @@ console.log(capital(["lonDon", "ManCHESTer", "BiRmiNGHAM", "liVERpoOL"]));
 
 //Create a function that, given an array similar to the above, sorts the array according to the "content of the elements".
 
-function sortIt(arr) {
-	let newArr = arr.sort((a,b)=> {
-		return (a - b)
-	})
-	return newArr.map(a => a);
+// function sortIt(arr) {
+// 	let newArr = arr.sort((a,b)=> {
+// 		return (a - b)
+// 	})
+// 	return newArr.map(a => a);
+// }
+
+// //Create a function to convert an array of percentages to their decimal equivalents.
+// function convertToDecimal(perc) {
+// 	let newArr = perc.map(a => (parseFloat(a)/100));
+// 	return newArr;
+// }
+
+// //Write a function that converts an object into an array, where each element represents a key-value pair in the form of an array.
+
+// function toArray(obj) {
+// 	return Object.entries(obj);
+// }
+
+
+//Create a function that accepts a string of space separated numbers and returns the highest and lowest number (as a string)
+
+function highLow(str) {
+let split = str.split(" ");
+console.log(split);
+let sort = split.sort((a,b)=>{
+  return Number(b) - Number(a);
+})
+console.log(sort, "SORT")
+return `${sort[0].toString()} , ${sort[sort.length -1].toString()}`
 }
 
-//Create a function to convert an array of percentages to their decimal equivalents.
-function convertToDecimal(perc) {
-	let newArr = perc.map(a => (parseFloat(a)/100));
-	return newArr;
-}
 
-//Write a function that converts an object into an array, where each element represents a key-value pair in the form of an array.
-
-function toArray(obj) {
-	return Object.entries(obj);
-}
+console.log(highLow("4 5 29 54 4 0 -214 542 -64 1 -3 6 -6"));
