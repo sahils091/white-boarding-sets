@@ -794,3 +794,9 @@ function convertToDecimal(perc) {
 	let newArr = perc.map(a => (parseFloat(a)/100));
 	return newArr;
 }
+
+//Write a function that converts an object into an array, where each element represents a key-value pair in the form of an array.
+
+function toArray(obj) {
+	return Object.entries(obj);
+}
