@@ -835,3 +835,9 @@ function sayHelloBye(name, num) {
 		return `Bye ${name.charAt(0).toUpperCase() + name.slice(1)}`
 	}
 }
+
+
+function addName(obj, name, value) {
+  obj[name] = value;
+ return obj;	
+}
