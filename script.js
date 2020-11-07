@@ -836,8 +836,20 @@ function sayHelloBye(name, num) {
 	}
 }
 
+//dynamically update the key-value pair
 
 function addName(obj, name, value) {
   obj[name] = value;
  return obj;	
+}
+
+//find factorial
+
+
+function factorial(num) {
+	if (num < 1) {
+		return 1
+	}else  {
+		return num *factorial((num) - 1)
+	}
 }
