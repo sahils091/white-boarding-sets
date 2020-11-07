@@ -804,15 +804,34 @@ console.log(capital(["lonDon", "ManCHESTer", "BiRmiNGHAM", "liVERpoOL"]));
 
 //Create a function that accepts a string of space separated numbers and returns the highest and lowest number (as a string)
 
-function highLow(str) {
-let split = str.split(" ");
-console.log(split);
-let sort = split.sort((a,b)=>{
-  return Number(b) - Number(a);
-})
-console.log(sort, "SORT")
-return `${sort[0].toString()} , ${sort[sort.length -1].toString()}`
+// function highLow(str) {
+// let split = str.split(" ");
+// console.log(split);
+// let sort = split.sort((a,b)=>{
+//   return Number(b) - Number(a);
+// })
+// console.log(sort, "SORT")
+// return `${sort[0].toString()} , ${sort[sort.length -1].toString()}`
+// }
+
+
+// console.log(highLow("4 5 29 54 4 0 -214 542 -64 1 -3 6 -6"));
+
+
+function whichIsLarger(f, g) {
+	if (f() > g()){
+		return "f"
+	}else if(f() < g()) {
+		return "g"
+	} else {
+		return "neither"
+	}	
 }
 
-
-console.log(highLow("4 5 29 54 4 0 -214 542 -64 1 -3 6 -6"));
+function sayHelloBye(name, num) {
+	if (num === 1) {
+		return `Hello ${name.charAt(0).toUpperCase() + name.slice(1)}`
+	}else {
+		return `Bye ${name.charAt(0).toUpperCase() + name.slice(1)}`
+	}
+}
