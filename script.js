@@ -853,3 +853,8 @@ function factorial(num) {
 		return num *factorial((num) - 1)
 	}
 }
+
+function convertToDecimal(perc) {
+	let newArr = perc.map(x => (parseFloat(x)/100))
+	return newArr;
+}
