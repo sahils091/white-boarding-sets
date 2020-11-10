@@ -858,3 +858,32 @@ function convertToDecimal(perc) {
 	let newArr = perc.map(x => (parseFloat(x)/100))
 	return newArr;
 }
+
+
+//+++++++++++++++OOP
+
+function createNewPerson(name) {
+  const obj = {};
+  obj.name = name;
+  obj.greeting = function() {
+    alert('Hi! I\'m ' + obj.name + '.');
+  };
+  return obj;
+}
+
+const salva = createNewPerson('Salva');
+salva.name;
+salva.greeting();
+
+
+function Person(name) {
+  this.name = name;
+  this.greeting = function() {
+    alert('Hi! I\'m ' + this.name + '.');
+  };
+}
+
+const person1 = new Person("Sahil");
+console.log(person1.name)
+
+
