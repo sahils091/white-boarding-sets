@@ -887,3 +887,7 @@ const person1 = new Person("Sahil");
 console.log(person1.name)
 
 
+function giveMeSomething(a) {
+	return "something " + a; 
+}
+
