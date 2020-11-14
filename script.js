@@ -891,3 +891,17 @@ function giveMeSomething(a) {
 	return "something " + a; 
 }
 
+
+function changeEnough(change, amountDue) {
+	let newChange = [];
+	newChange.push((change[0]*25), (change[1]*10), (change[2]*10), (change[3]));
+	let add = newChange.reduce((a,b)=> {
+		return a+b;
+	},0)
+	add = Number(add)/100;
+	if (add > amountDue) {
+		return true;
+	}else{
+		return false
+	}
+}
