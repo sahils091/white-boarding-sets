@@ -879,7 +879,7 @@ salva.greeting();
 function Person(name) {
   this.name = name;
   this.greeting = function() {
-    alert('Hi! I\'m ' + this.name + '.');
+    //alert('Hi! I\'m ' + this.name + '.');
   };
 }
 
@@ -905,3 +905,12 @@ function changeEnough(change, amountDue) {
 		return false
 	}
 }
+
+
+function joinDigits(n) {
+  let result = [];
+  for (let i = 1; i <= n; i++)
+    result.push(String(i).split('').join('-'));
+  return result.join('-');
+}
+console.log(joinDigits(4))
