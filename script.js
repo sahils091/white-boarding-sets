@@ -883,34 +883,46 @@ function Person(name) {
   };
 }
 
-const person1 = new Person("Sahil");
-console.log(person1.name)
+// const person1 = new Person("Sahil");
+// console.log(person1.name)
 
 
-function giveMeSomething(a) {
-	return "something " + a; 
-}
+// function giveMeSomething(a) {
+// 	return "something " + a; 
+// }
 
 
-function changeEnough(change, amountDue) {
-	let newChange = [];
-	newChange.push((change[0]*25), (change[1]*10), (change[2]*10), (change[3]));
-	let add = newChange.reduce((a,b)=> {
-		return a+b;
-	},0)
-	add = Number(add)/100;
-	if (add > amountDue) {
-		return true;
-	}else{
-		return false
-	}
-}
+// function changeEnough(change, amountDue) {
+// 	let newChange = [];
+// 	newChange.push((change[0]*25), (change[1]*10), (change[2]*10), (change[3]));
+// 	let add = newChange.reduce((a,b)=> {
+// 		return a+b;
+// 	},0)
+// 	add = Number(add)/100;
+// 	if (add > amountDue) {
+// 		return true;
+// 	}else{
+// 		return false
+// 	}
+// }
 
 
-function joinDigits(n) {
-  let result = [];
-  for (let i = 1; i <= n; i++)
-    result.push(String(i).split('').join('-'));
-  return result.join('-');
-}
-console.log(joinDigits(4))
+// function joinDigits(n) {
+//   let result = [];
+//   for (let i = 1; i <= n; i++)
+//     result.push(String(i).split('').join('-'));
+//   return result.join('-');
+// }
+// console.log(joinDigits(4))
+
+
+class Shape {
+  constructor(name, sides, sideLength){
+  this.name = name;
+    this.sides = sides;
+    this.sideLength = sideLength;}
+    
+   calcPerimeter(){
+    console.log( (Number(this.sideLength)* Number(this.sides)));
+  }
+  }
