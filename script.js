@@ -926,3 +926,7 @@ class Shape {
     console.log( (Number(this.sideLength)* Number(this.sides)));
   }
   }
+
+
+  const REGEXP = /\^$/
+REGEXP.test("") ===true
