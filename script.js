@@ -758,21 +758,20 @@ console.log(capital(["lonDon", "ManCHESTer", "BiRmiNGHAM", "liVERpoOL"]));
 
 // console.log(shiftToLeft([46, 6]));
 
-
 // create a functions that sorts according to one of the properties of an object.
 
 // function sortDrinkByPrice(drinks) {
 // 	let sorted  = drinks.sort((a,b)=> {
 // 		return a.price-b.price
 // 	})
-// 		return sorted;	
+// 		return sorted;
 // }
 
 // // Converting between two data types
 
 // function toArray(num) {
 // 	let split = num.toString().split("").map(a => Number(a));
-// 	return (split);	
+// 	return (split);
 // }
 
 // function toNumber(arr) {
@@ -801,7 +800,6 @@ console.log(capital(["lonDon", "ManCHESTer", "BiRmiNGHAM", "liVERpoOL"]));
 // 	return Object.entries(obj);
 // }
 
-
 //Create a function that accepts a string of space separated numbers and returns the highest and lowest number (as a string)
 
 // function highLow(str) {
@@ -814,71 +812,66 @@ console.log(capital(["lonDon", "ManCHESTer", "BiRmiNGHAM", "liVERpoOL"]));
 // return `${sort[0].toString()} , ${sort[sort.length -1].toString()}`
 // }
 
-
 // console.log(highLow("4 5 29 54 4 0 -214 542 -64 1 -3 6 -6"));
 
-
 function whichIsLarger(f, g) {
-	if (f() > g()){
-		return "f"
-	}else if(f() < g()) {
-		return "g"
-	} else {
-		return "neither"
-	}	
+  if (f() > g()) {
+    return "f";
+  } else if (f() < g()) {
+    return "g";
+  } else {
+    return "neither";
+  }
 }
 
 function sayHelloBye(name, num) {
-	if (num === 1) {
-		return `Hello ${name.charAt(0).toUpperCase() + name.slice(1)}`
-	}else {
-		return `Bye ${name.charAt(0).toUpperCase() + name.slice(1)}`
-	}
+  if (num === 1) {
+    return `Hello ${name.charAt(0).toUpperCase() + name.slice(1)}`;
+  } else {
+    return `Bye ${name.charAt(0).toUpperCase() + name.slice(1)}`;
+  }
 }
 
 //dynamically update the key-value pair
 
 function addName(obj, name, value) {
   obj[name] = value;
- return obj;	
+  return obj;
 }
 
 //find factorial
 
-
 function factorial(num) {
-	if (num < 1) {
-		return 1
-	}else  {
-		return num *factorial((num) - 1)
-	}
+  if (num < 1) {
+    return 1;
+  } else {
+    return num * factorial(num - 1);
+  }
 }
 
 function convertToDecimal(perc) {
-	let newArr = perc.map(x => (parseFloat(x)/100))
-	return newArr;
+  let newArr = perc.map((x) => parseFloat(x) / 100);
+  return newArr;
 }
-
 
 //+++++++++++++++OOP
 
 function createNewPerson(name) {
   const obj = {};
   obj.name = name;
-  obj.greeting = function() {
-    alert('Hi! I\'m ' + obj.name + '.');
+  obj.greeting = function () {
+    alert("Hi! I'm " + obj.name + ".");
   };
   return obj;
 }
 
-const salva = createNewPerson('Salva');
+const salva = createNewPerson("Salva");
 salva.name;
 salva.greeting();
 
-
 function Person(name) {
   this.name = name;
-  this.greeting = function() {
+  this.greeting = function () {
     //alert('Hi! I\'m ' + this.name + '.');
   };
 }
@@ -886,11 +879,9 @@ function Person(name) {
 // const person1 = new Person("Sahil");
 // console.log(person1.name)
 
-
 // function giveMeSomething(a) {
-// 	return "something " + a; 
+// 	return "something " + a;
 // }
-
 
 // function changeEnough(change, amountDue) {
 // 	let newChange = [];
@@ -906,7 +897,6 @@ function Person(name) {
 // 	}
 // }
 
-
 // function joinDigits(n) {
 //   let result = [];
 //   for (let i = 1; i <= n; i++)
@@ -915,18 +905,104 @@ function Person(name) {
 // }
 // console.log(joinDigits(4))
 
-
 class Shape {
-  constructor(name, sides, sideLength){
-  this.name = name;
+  constructor(name, sides, sideLength) {
+    this.name = name;
     this.sides = sides;
-    this.sideLength = sideLength;}
-    
-   calcPerimeter(){
-    console.log( (Number(this.sideLength)* Number(this.sides)));
-  }
+    this.sideLength = sideLength;
   }
 
+  calcPerimeter() {
+    console.log(Number(this.sideLength) * Number(this.sides));
+  }
+}
 
-  const REGEXP = /\^$/
-REGEXP.test("") ===true
+const REGEXP = /\^$/;
+REGEXP.test("") === true;
+
+//Create a function that concatenates n input arrays, where n is variable.
+
+function concat(...args) {
+  let newArr = [];
+  newArr.push(...args);
+  return newArr.flat(Infinity);
+}
+
+// function emotify(str) {
+//   if (str.includes("smile")){
+//     return "Make me :D"
+//   }else if (str.includes("grin")){
+//     return "Make me :)"
+//   }else if (str.includes("sad")){
+//     return "Make me :("
+//   }else {
+//     return 'Make me :P';
+//   }
+// }
+
+function emotify(str) {
+  let newStr = str
+    .replace("smile", ":D")
+    .replace("grin", ":)")
+    .replace("sad", ":(")
+    .replace("angry", ":P");
+  // if (str.includes("smile")){
+  //   return "Make me :D"
+  // }else if (str.includes("grin")){
+  //   return "Make me :)"
+  // }else if (str.includes("sad")){
+  //   return "Make me :("
+  // }else {
+  //   return 'Make me :P';
+  // }
+  return newStr;
+}
+console.log(emotify("Make me sad"));
+
+function generation(x, y) {
+  if (x === 0) {
+    return "me!";
+  }
+  let newStr = "";
+  let gender1 = "father";
+  let gender2 = "son";
+  if (y === "m") {
+    if (x === -1) {
+      return gender1;
+    } else if (x === -2) {
+      return "grandfather";
+    } else if (x === -3) {
+      return "great grandfather";
+    } else if (x === 1) {
+      return "son";
+    } else if (x === 2) {
+      return "grandson";
+    } else if (x === 3) {
+      return "great grandson";
+    }
+  } else if (y === "f") {
+    if (x === -1) {
+      return "mother";
+    } else if (x === -2) {
+      return "grandmother";
+    } else if (x === -3) {
+      return "great grandmother";
+    } else if (x === 1) {
+      return "daughter";
+    } else if (x === 2) {
+      return "granddaughter";
+    } else if (x === 3) {
+      return "great granddaughter";
+    }
+  }
+}
+
+function intWithinBounds(n, lower, upper) {
+  if (!Number.isInteger(n)) {
+    return false;
+  } else if (n >= lower && n < upper) {
+    return true;
+  } else {
+    return false;
+  }
+}
