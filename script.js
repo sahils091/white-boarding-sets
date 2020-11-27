@@ -1006,3 +1006,19 @@ function intWithinBounds(n, lower, upper) {
     return false;
   }
 }
+
+function checkEquals(arr1, arr2) {
+  let num = 0;
+  for (let i = 0; i < arr1.length; i++) {
+    for (let j = 0; j < arr2.length; j++) {
+      if (arr1[i] === arr2[j]) {
+        num += 1;
+      }
+    }
+  }
+  if (num === arr1.length && num === arr2.length) {
+    return true;
+  } else {
+    return false;
+  }
+}
