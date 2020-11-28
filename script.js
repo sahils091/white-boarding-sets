@@ -1022,3 +1022,9 @@ function checkEquals(arr1, arr2) {
     return false;
   }
 }
+
+function minMax(arr) {
+	let minMax = [];
+	minMax.push(Math.min(...arr), Math.max(...arr))
+	return minMax;
+}
