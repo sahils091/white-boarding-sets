@@ -665,31 +665,31 @@ console.log(
 
 // 	console.log(isOmnipresent([[1, 1], [1, 3], [5, 1], [6, 1]], 6))
 
-function leader(arr) {
-  let newArr = [];
-  console.log(arr);
-  let big = Math.max(...arr);
-  newArr = arr.slice(arr.indexOf(big));
-  return newArr;
-}
+// function leader(arr) {
+//   let newArr = [];
+//   console.log(arr);
+//   let big = Math.max(...arr);
+//   newArr = arr.slice(arr.indexOf(big));
+//   return newArr;
+// }
 
-let cities = ["lonDon", "ManCHESTer", "BiRmiNGHAM", "liVERpoOL"];
+// let cities = ["lonDon", "ManCHESTer", "BiRmiNGHAM", "liVERpoOL"];
 
-for (let i = 0; i < cities.length; i++) {}
+// for (let i = 0; i < cities.length; i++) {}
 
-const capital = (arr) => {
-  let newArr = [];
-  for (let i = 0; i < arr.length; i++) {
-    let input = arr[i].toLowerCase();
-    let upp = input[0].toUpperCase();
-    console.log(upp);
-    let final = input.replace(input[0], upp);
-    console.log(final);
-    newArr.push(final);
-  }
-  return newArr;
-};
-console.log(capital(["lonDon", "ManCHESTer", "BiRmiNGHAM", "liVERpoOL"]));
+// const capital = (arr) => {
+//   let newArr = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     let input = arr[i].toLowerCase();
+//     let upp = input[0].toUpperCase();
+//     console.log(upp);
+//     let final = input.replace(input[0], upp);
+//     console.log(final);
+//     newArr.push(final);
+//   }
+//   return newArr;
+// };
+// console.log(capital(["lonDon", "ManCHESTer", "BiRmiNGHAM", "liVERpoOL"]));
 
 // let stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
 //                 'GNF576746573fhdg4737dh4;Greenfield',
@@ -814,40 +814,40 @@ console.log(capital(["lonDon", "ManCHESTer", "BiRmiNGHAM", "liVERpoOL"]));
 
 // console.log(highLow("4 5 29 54 4 0 -214 542 -64 1 -3 6 -6"));
 
-function whichIsLarger(f, g) {
-  if (f() > g()) {
-    return "f";
-  } else if (f() < g()) {
-    return "g";
-  } else {
-    return "neither";
-  }
-}
+// function whichIsLarger(f, g) {
+//   if (f() > g()) {
+//     return "f";
+//   } else if (f() < g()) {
+//     return "g";
+//   } else {
+//     return "neither";
+//   }
+// }
 
-function sayHelloBye(name, num) {
-  if (num === 1) {
-    return `Hello ${name.charAt(0).toUpperCase() + name.slice(1)}`;
-  } else {
-    return `Bye ${name.charAt(0).toUpperCase() + name.slice(1)}`;
-  }
-}
+// function sayHelloBye(name, num) {
+//   if (num === 1) {
+//     return `Hello ${name.charAt(0).toUpperCase() + name.slice(1)}`;
+//   } else {
+//     return `Bye ${name.charAt(0).toUpperCase() + name.slice(1)}`;
+//   }
+// }
 
-//dynamically update the key-value pair
+// //dynamically update the key-value pair
 
-function addName(obj, name, value) {
-  obj[name] = value;
-  return obj;
-}
+// function addName(obj, name, value) {
+//   obj[name] = value;
+//   return obj;
+// }
 
-//find factorial
+// //find factorial
 
-function factorial(num) {
-  if (num < 1) {
-    return 1;
-  } else {
-    return num * factorial(num - 1);
-  }
-}
+// function factorial(num) {
+//   if (num < 1) {
+//     return 1;
+//   } else {
+//     return num * factorial(num - 1);
+//   }
+// }
 
 function convertToDecimal(perc) {
   let newArr = perc.map((x) => parseFloat(x) / 100);
