@@ -1028,3 +1028,12 @@ function minMax(arr) {
 	minMax.push(Math.min(...arr), Math.max(...arr))
 	return minMax;
 }
+
+function objectToArray(obj) {
+	return Object.entries(obj)
+}
+console.log(objectToArray({
+	D: 1, 
+  B: 2, 
+  C: 3
+}));
