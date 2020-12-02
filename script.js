@@ -922,11 +922,11 @@ REGEXP.test("") === true;
 
 //Create a function that concatenates n input arrays, where n is variable.
 
-function concat(...args) {
-  let newArr = [];
-  newArr.push(...args);
-  return newArr.flat(Infinity);
-}
+// function concat(...args) {
+//   let newArr = [];
+//   newArr.push(...args);
+//   return newArr.flat(Infinity);
+// }
 
 // function emotify(str) {
 //   if (str.includes("smile")){
@@ -940,12 +940,12 @@ function concat(...args) {
 //   }
 // }
 
-function emotify(str) {
-  let newStr = str
-    .replace("smile", ":D")
-    .replace("grin", ":)")
-    .replace("sad", ":(")
-    .replace("angry", ":P");
+// function emotify(str) {
+//   let newStr = str
+//     .replace("smile", ":D")
+//     .replace("grin", ":)")
+//     .replace("sad", ":(")
+//     .replace("angry", ":P");
   // if (str.includes("smile")){
   //   return "Make me :D"
   // }else if (str.includes("grin")){
