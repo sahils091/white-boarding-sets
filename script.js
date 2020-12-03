@@ -1037,3 +1037,10 @@ console.log(objectToArray({
   B: 2, 
   C: 3
 }));
+
+function tuckIn(arr1, arr2) {
+	let arr =[];
+    arr.push(arr1[0], ...arr2, arr1[1]);
+    console.log(arr);
+return arr;
+}
