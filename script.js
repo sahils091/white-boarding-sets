@@ -1044,3 +1044,13 @@ function tuckIn(arr1, arr2) {
     console.log(arr);
 return arr;
 }
+
+function potatoes(str) {
+	let split = str.split(" ");
+	let counter = 0
+let count = split.filter(i =>{
+	return i === "potato";
+});
+	return count.length;
+	
+}
