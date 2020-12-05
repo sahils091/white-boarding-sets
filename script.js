@@ -1054,3 +1054,18 @@ let count = split.filter(i =>{
 	return count.length;
 	
 }
+
+function chosenWine(wines) {
+	if (wines.length < 1) {
+		return null
+	}else if(wines.length === 1) {
+		return wines
+	}
+	
+	let newArr = wines.sort((a , b)=>{
+		return a.price - b.price
+	});
+     console.log(newArr, "THis is the new array");
+     console.log(newArr[1].name);
+	return newArr[1].name;
+}
