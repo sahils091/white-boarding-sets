@@ -1067,3 +1067,22 @@ function chosenWine(wines) {
 	});
 	return newArr[1].name;
 }
+
+
+function doubleSwap(str, c1, c2) {
+  let newStr = str.split("");
+  let newArr = []
+  for (let i =0; i < newStr.length; i++){
+   if (newStr[i] === c1){
+    newArr.push(c2)
+  console.log(newArr, "C2 Switch")
+  }else if (newStr[i] === c2){
+  newArr.push(c1);
+  console.log(newArr, "C1 Switch")
+  }else {
+  newArr.push(newStr[i])
+      }
+    }
+  newArr = newArr.join("");
+  return newArr;
+  }
