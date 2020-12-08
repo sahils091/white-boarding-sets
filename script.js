@@ -1110,4 +1110,23 @@ function doubleSwap(str, c1, c2) {
   
   }
 
-  
+  let  famousCats = ["garfield", "felix", "meowth"];
+  let myFavourite = "meowth";
+
+  for (let i =0; i < famousCats.length; i++) {
+    if (famousCats[i] !== myFavourite) {
+      console.log("kitty");
+    }else {
+      console.log("There you are!");
+      break 
+    }
+  }
+  for (let i = 1; i < famousCats.length; i++) {
+    console.log(famousCats[i]);
+  }
+
+  let i = 0;
+  while (i < famousCats.length){
+    console.log(famousCats[i]);
+    i++
+  }
