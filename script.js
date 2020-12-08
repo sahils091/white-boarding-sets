@@ -1086,3 +1086,28 @@ function doubleSwap(str, c1, c2) {
   newArr = newArr.join("");
   return newArr;
   }
+
+
+  console.log("--------Control Flow Lab-------------");
+
+  let time;
+
+  if (time < 10) {
+    console.log("You Are Early");
+  }else if(tile === 10) {
+    console.log("You Are On time");
+  }else {
+    console.log("You Are late");
+  }
+
+  let facialExpression;
+  switch (facialExpression) {
+    case  "smiling" : console.log("HAHA");
+    break;
+    case  "Frown" : console.log("NOOOOO");
+    break;
+   default: console.log("Unknown");
+  
+  }
+
+  
