@@ -1130,3 +1130,12 @@ function doubleSwap(str, c1, c2) {
     console.log(famousCats[i]);
     i++
   }
+
+
+function numInStr(arr) {
+	let regEx = /[0-9]/g
+	let newArr = arr.filter((i)=>{
+	return	i.match(regEx);
+	})
+return newArr;
+}
