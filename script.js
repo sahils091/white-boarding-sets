@@ -1088,54 +1088,54 @@ function doubleSwap(str, c1, c2) {
   }
 
 
-  console.log("--------Control Flow Lab-------------");
+//   console.log("--------Control Flow Lab-------------");
 
-  let time;
+//   let time;
 
-  if (time < 10) {
-    console.log("You Are Early");
-  }else if(tile === 10) {
-    console.log("You Are On time");
-  }else {
-    console.log("You Are late");
-  }
+//   if (time < 10) {
+//     console.log("You Are Early");
+//   }else if(tile === 10) {
+//     console.log("You Are On time");
+//   }else {
+//     console.log("You Are late");
+//   }
 
-  let facialExpression;
-  switch (facialExpression) {
-    case  "smiling" : console.log("HAHA");
-    break;
-    case  "Frown" : console.log("NOOOOO");
-    break;
-   default: console.log("Unknown");
+//   let facialExpression;
+//   switch (facialExpression) {
+//     case  "smiling" : console.log("HAHA");
+//     break;
+//     case  "Frown" : console.log("NOOOOO");
+//     break;
+//    default: console.log("Unknown");
   
-  }
+//   }
 
-  let  famousCats = ["garfield", "felix", "meowth"];
-  let myFavourite = "meowth";
+//   let  famousCats = ["garfield", "felix", "meowth"];
+//   let myFavourite = "meowth";
 
-  for (let i =0; i < famousCats.length; i++) {
-    if (famousCats[i] !== myFavourite) {
-      console.log("kitty");
-    }else {
-      console.log("There you are!");
-      break 
-    }
-  }
-  for (let i = 1; i < famousCats.length; i++) {
-    console.log(famousCats[i]);
-  }
+//   for (let i =0; i < famousCats.length; i++) {
+//     if (famousCats[i] !== myFavourite) {
+//       console.log("kitty");
+//     }else {
+//       console.log("There you are!");
+//       break 
+//     }
+//   }
+//   for (let i = 1; i < famousCats.length; i++) {
+//     console.log(famousCats[i]);
+//   }
 
-  let i = 0;
-  while (i < famousCats.length){
-    console.log(famousCats[i]);
-    i++
-  }
+//   let i = 0;
+//   while (i < famousCats.length){
+//     console.log(famousCats[i]);
+//     i++
+//   }
 
 
-function numInStr(arr) {
-	let regEx = /[0-9]/g
-	let newArr = arr.filter((i)=>{
-	return	i.match(regEx);
-	})
-return newArr;
-}
+// function numInStr(arr) {
+// 	let regEx = /[0-9]/g
+// 	let newArr = arr.filter((i)=>{
+// 	return	i.match(regEx);
+// 	})
+// return newArr;
+// }
