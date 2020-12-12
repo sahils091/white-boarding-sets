@@ -1140,29 +1140,29 @@ function doubleSwap(str, c1, c2) {
 // return newArr;
 // }
 
-function isFirstSuperior(arr1, arr2) {
-	for (let i = 0; i < arr1.length; i++) {
-		for (let j = 0; j < arr2.length; j++){
-			if (typeof arr1[i] === "number") {
-                console.log("Testing Number")
-				if (arr1[i] > arr2[j]){
-					return true;
-				}
-			}else if (arr1[i].length === 1 && arr2[j].length === 1 ) {
-                   console.log("Testing alphabet")
-				if (arr1[i] > arr2[j]){
-                console.log(arr1[i],arr2[j] )
-					return true;
-				}
-			}else if (arr1[i].length > 1) {
-                  console.log("Testing string") 
+// function isFirstSuperior(arr1, arr2) {
+// 	for (let i = 0; i < arr1.length; i++) {
+// 		for (let j = 0; j < arr2.length; j++){
+// 			if (typeof arr1[i] === "number") {
+//                 console.log("Testing Number")
+// 				if (arr1[i] > arr2[j]){
+// 					return true;
+// 				}
+// 			}else if (arr1[i].length === 1 && arr2[j].length === 1 ) {
+//                    console.log("Testing alphabet")
+// 				if (arr1[i] > arr2[j]){
+//                 console.log(arr1[i],arr2[j] )
+// 					return true;
+// 				}
+// 			}else if (arr1[i].length > 1) {
+//                   console.log("Testing string") 
  
-				if (arr1[i] > arr2[j]){
-					return true;
-				}
-			}else {
-				return false
-			}
-		}
-	}
-}
+// 				if (arr1[i] > arr2[j]){
+// 					return true;
+// 				}
+// 			}else {
+// 				return false
+// 			}
+// 		}
+// 	}
+// }
