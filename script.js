@@ -940,23 +940,23 @@ REGEXP.test("") === true;
 //   }
 // }
 
-// function emotify(str) {
-//   let newStr = str
-//     .replace("smile", ":D")
-//     .replace("grin", ":)")
-//     .replace("sad", ":(")
-//     .replace("angry", ":P");
-  // if (str.includes("smile")){
-  //   return "Make me :D"
-  // }else if (str.includes("grin")){
-  //   return "Make me :)"
-  // }else if (str.includes("sad")){
-  //   return "Make me :("
-  // }else {
-  //   return 'Make me :P';
-  // }
-  return newStr;
-}
+// // function emotify(str) {
+// //   let newStr = str
+// //     .replace("smile", ":D")
+// //     .replace("grin", ":)")
+// //     .replace("sad", ":(")
+// //     .replace("angry", ":P");
+//   // if (str.includes("smile")){
+//   //   return "Make me :D"
+//   // }else if (str.includes("grin")){
+//   //   return "Make me :)"
+//   // }else if (str.includes("sad")){
+//   //   return "Make me :("
+//   // }else {
+//   //   return 'Make me :P';
+//   // }
+//   return newStr;
+// }
 console.log(emotify("Make me sad"));
 
 function generation(x, y) {
@@ -1166,3 +1166,10 @@ function doubleSwap(str, c1, c2) {
 // 		}
 // 	}
 // }
+
+let abc = 0;
+
+const clock = setTimeout(() => {
+  abc++
+  console.log(abc); 
+}, 1000);
