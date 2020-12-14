@@ -905,20 +905,20 @@ function Person(name) {
 // }
 // console.log(joinDigits(4))
 
-class Shape {
-  constructor(name, sides, sideLength) {
-    this.name = name;
-    this.sides = sides;
-    this.sideLength = sideLength;
-  }
+// class Shape {
+//   constructor(name, sides, sideLength) {
+//     this.name = name;
+//     this.sides = sides;
+//     this.sideLength = sideLength;
+//   }
 
-  calcPerimeter() {
-    console.log(Number(this.sideLength) * Number(this.sides));
-  }
-}
+//   calcPerimeter() {
+//     console.log(Number(this.sideLength) * Number(this.sides));
+//   }
+// }
 
-const REGEXP = /\^$/;
-REGEXP.test("") === true;
+// const REGEXP = /\^$/;
+// REGEXP.test("") === true;
 
 //Create a function that concatenates n input arrays, where n is variable.
 
