@@ -1173,3 +1173,15 @@ const clock = setTimeout(() => {
   abc++
   console.log(abc); 
 }, 1000);
+
+function possibleBonus(a, b) {
+	if (a > b) {
+		return false;
+	} else if (a === b) {
+		return false;
+	} else if ((a + 6) >= b) {
+		return true;
+	} else {
+		return false;
+	}
+}
