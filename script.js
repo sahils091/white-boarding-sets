@@ -1185,3 +1185,19 @@ function possibleBonus(a, b) {
 		return false;
 	}
 }
+
+const range = (start, end) =>{
+  let arr = [];
+  for (let i =start; i <= end; i++) {
+  arr.push(i)
+  }
+  console.log(arr);
+  return arr;
+  }
+
+  let sum2 = (array)=>{
+    let arr1 = array.reduce((a,b)=>{
+    return a + b; 
+    })
+    return arr1;
+    }
