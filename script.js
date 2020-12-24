@@ -957,7 +957,7 @@ function Person(name) {
 //   // }
 //   return newStr;
 // }
-console.log(emotify("Make me sad"));
+// console.log(emotify("Make me sad"));
 
 function generation(x, y) {
   if (x === 0) {
@@ -1209,65 +1209,109 @@ const range = (start, end) =>{
 // Use the html on the index.html as your reference to build out the elements
 // Finally complete the code necessary to get the data for the post title, author, url, and ups
 
-requestItems = () => {
-  // Create your axios request here
-  axios.get("https://www.reddit.com/r/toronto.json")
-  .then(redditResults => {
-    console.log(redditResults)
-    redditResults.data.data.children.forEach( post => {
-      postListItem(post)
-    })
-  }).catch( err => {
-    console.log(err)
-  })
-};
+// requestItems = () => {
+//   // Create your axios request here
+//   axios.get("https://www.reddit.com/r/toronto.json")
+//   .then(redditResults => {
+//     console.log(redditResults)
+//     redditResults.data.data.children.forEach( post => {
+//       postListItem(post)
+//     })
+//   }).catch( err => {
+//     console.log(err)
+//   })
+// };
 
 
 
-requestItems();
+// requestItems();
 
-postListItem = (item) => {
-  // Accepts one object (representing a reddit post) and appends it to the document
-  let postList = document.querySelector(".postList");
+// postListItem = (item) => {
+//   // Accepts one object (representing a reddit post) and appends it to the document
+//   let postList = document.querySelector(".postList");
 
-  // Create the post container
-  let postContatiner = document.createElement("div");
-  postContatiner.classList.add("postWrapper");
-  postList.appendChild(postContatiner);
-
-
-  // Create the post title
-  let title = document.createElement("h3");
-  title.classList.add("postTitle");
-  title.innerText = item.data.title
-  postContatiner.appendChild(title)
+//   // Create the post container
+//   let postContatiner = document.createElement("div");
+//   postContatiner.classList.add("postWrapper");
+//   postList.appendChild(postContatiner);
 
 
-  // Create the post author
-  let author = document.createElement("p");
-  author.classList.add("postAuthor");
-  author.innerText = item.data.author
-  postContatiner.appendChild(author)
+//   // Create the post title
+//   let title = document.createElement("h3");
+//   title.classList.add("postTitle");
+//   title.innerText = item.data.title
+//   postContatiner.appendChild(title)
+
+
+//   // Create the post author
+//   let author = document.createElement("p");
+//   author.classList.add("postAuthor");
+//   author.innerText = item.data.author
+//   postContatiner.appendChild(author)
   
 
-  // Create the post info container
-  let infoWrap = document.createElement("div");
-  infoWrap.classList.add("postInfo");
-  postContatiner.appendChild(infoWrap);
+//   // Create the post info container
+//   let infoWrap = document.createElement("div");
+//   infoWrap.classList.add("postInfo");
+//   postContatiner.appendChild(infoWrap);
 
-  // Create url element
-  let url = document.createElement("a");
-  url.classList.add("postURL")
-  //The href links the actual url
-  url.href = item.data.url
-  //Where the innerText is the word that is linked
-  url.innerText = "Link"
-  infoWrap.appendChild(url)
+//   // Create url element
+//   let url = document.createElement("a");
+//   url.classList.add("postURL")
+//   //The href links the actual url
+//   url.href = item.data.url
+//   //Where the innerText is the word that is linked
+//   url.innerText = "Link"
+//   infoWrap.appendChild(url)
 
 
-  // Create the upvote element
-  let upvotes = document.createElement("p");
-  upvotes.classList.add("upvotes");
-  upvotes.innerText = "Upvotes: " + item.data.ups
-  infoWrap.appendChild(upvotes)
+//   // Create the upvote element
+//   let upvotes = document.createElement("p");
+//   upvotes.classList.add("upvotes");
+//   upvotes.innerText = "Upvotes: " + item.data.ups
+//   infoWrap.appendChild(upvotes)
+// };
+
+
+let addition =  function(nums, target) {
+  let newArr = []
+  for (let i = 0; i < nums.length; i++) {
+      for (let j = i+1; j <= nums.length; j++) {
+       console.log( nums.indexOf(nums[j]), "Starting INdex")
+        console.log(nums[i], nums.indexOf(nums[j]), "Within Loops")
+          if ( nums[i] + nums[j] == target ) {
+            console.log(target)
+            console.log(nums[i] + nums[j])
+              // newArr.push(nums.indexOf(nums[i]), nums.indexOf(nums[j]))
+              // console.log(newArr);
+              // return newArr;
+              return [i,j]
+          }
+      }
+  }
+  //return newArr;
 };
+
+console.log(addition([3,3],6))
+
+var addTwoNumbers = function(l1, l2) {
+  let list1 = String(l1.reverse());
+  let list2 = String(l2.reverse());
+  console.log(list1, list2, "reversed Lists");
+  list2 = String(list2);
+  list1 = String(list1);
+  console.log(list1, list2, "String  Lists")
+
+  let split1 = list1.split(",");
+  console.log(split1, "Split")
+  let join1 = split1.join("")
+  console.log(join1)
+  
+  let split2 = list2.split(",");
+  console.log(split2, "Split")
+  let join2 = split2.join("")
+  console.log(join2)
+
+return  parseInt(join1) + parseInt(join2);
+};
+console.log(addTwoNumbers([2,4,3], [5,6,4]))
