@@ -1201,3 +1201,73 @@ const range = (start, end) =>{
     })
     return arr1;
     }
+
+
+    // Create an axios request in the requestItems function that will make a GET request to "https://www.reddit.com/r/toronto.json"
+// Create a loop that will run the postList function for each post in the reddit API
+// Complete the postList function to build the html
+// Use the html on the index.html as your reference to build out the elements
+// Finally complete the code necessary to get the data for the post title, author, url, and ups
+
+requestItems = () => {
+  // Create your axios request here
+  axios.get("https://www.reddit.com/r/toronto.json")
+  .then(redditResults => {
+    console.log(redditResults)
+    redditResults.data.data.children.forEach( post => {
+      postListItem(post)
+    })
+  }).catch( err => {
+    console.log(err)
+  })
+};
+
+
+
+requestItems();
+
+postListItem = (item) => {
+  // Accepts one object (representing a reddit post) and appends it to the document
+  let postList = document.querySelector(".postList");
+
+  // Create the post container
+  let postContatiner = document.createElement("div");
+  postContatiner.classList.add("postWrapper");
+  postList.appendChild(postContatiner);
+
+
+  // Create the post title
+  let title = document.createElement("h3");
+  title.classList.add("postTitle");
+  title.innerText = item.data.title
+  postContatiner.appendChild(title)
+
+
+  // Create the post author
+  let author = document.createElement("p");
+  author.classList.add("postAuthor");
+  author.innerText = item.data.author
+  postContatiner.appendChild(author)
+  
+
+  // Create the post info container
+  let infoWrap = document.createElement("div");
+  infoWrap.classList.add("postInfo");
+  postContatiner.appendChild(infoWrap);
+
+  // Create url element
+  let url = document.createElement("a");
+  url.classList.add("postURL")
+  //The href links the actual url
+  url.href = item.data.url
+  //Where the innerText is the word that is linked
+  url.innerText = "Link"
+  infoWrap.appendChild(url)
+
+
+  // Create the upvote element
+  let upvotes = document.createElement("p");
+  upvotes.classList.add("upvotes");
+  upvotes.innerText = "Upvotes: " + item.data.ups
+  infoWrap.appendChild(upvotes)
+};
