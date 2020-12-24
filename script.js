@@ -1294,7 +1294,7 @@ let addition =  function(nums, target) {
 
 console.log(addition([3,3],6))
 
-var addTwoNumbers = function(l1, l2) {
+const addTwoNumbers = function(l1, l2) {
   let list1 = String(l1.reverse());
   let list2 = String(l2.reverse());
   console.log(list1, list2, "reversed Lists");
@@ -1315,3 +1315,21 @@ var addTwoNumbers = function(l1, l2) {
 return  parseInt(join1) + parseInt(join2);
 };
 console.log(addTwoNumbers([2,4,3], [5,6,4]))
+
+var lengthOfLongestSubstring = function(s) {
+  var temp = [];
+  var maxLength = 0;
+  
+  for(var i = 0; i < s.length; i++){
+      if(temp.indexOf(s[i]) === -1){
+          temp.push(s[i]);
+          if(temp.length > maxLength)
+              maxLength = temp.length;
+      }else{
+          temp = temp.slice(temp.indexOf(s[i]) + 1,temp.length);
+          temp.push(s[i]);
+      }
+  }
+  
+  return maxLength;
+};
