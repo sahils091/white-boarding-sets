@@ -1333,3 +1333,52 @@ var lengthOfLongestSubstring = function(s) {
   
   return maxLength;
 };
+
+
+const  avg =  (n1, n2, n3 ) => {
+  
+  let average = ((n1 + n2 + n3) /3);
+  console.log(average); 
+  return  average;
+}
+avg(11,23,55);
+
+const userGreeting = (first, last) =>{
+  return `Hi ${first} ${last}! What a beautiful day`
+}
+
+const wordArr = ([words]) =>{
+  let totalWords =  words.length;
+  let greaterFive = 0;
+  let lessFive = 0
+
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].length <= 5) {
+      lessFive++
+    }else {
+      greaterFive++
+    }
+  }
+  let statObj = {};
+    statObj.totalWords = totalWords;
+    statObj.greaterFive = greaterFive;
+    statObj.lessFive = lessFive;
+
+    console.log(statObj);
+    return statObj;
+
+}
+
+const printTriangle = (num) => {
+
+  for (let i = 1; i < num ; i++) {
+    console.log('first Loop')
+    for (let j = i; j < num ; j++) {
+      console.log('second Loop, About to print');
+      console.log("#")
+    };
+    console.log('second Loop, About to line bReak');
+    '\n'
+
+  }
+}
