@@ -1382,3 +1382,34 @@ const printTriangle = (num) => {
 
   }
 }
+
+function digitAtPosition(num, pos) {
+	return Math.floor(num / Math.pow(10, pos)) % 10;
+}
+
+//Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.
+
+
+
+function digitsCount(num) {
+	return ((num === 0) ? 1 : Math.floor(Math.log10(num))) + 1;
+}
+
+var isPalindrome = function(x) {
+    if (x < 0) {
+	  return false;
+	}
+	let len = digitsCount(x) - 1;
+
+	let i = 0;
+	let j = len;
+	
+	while (i !== j && j > i) {
+		if (digitAtPosition(x, i) !== digitAtPosition(x, j)) {
+			return false;
+		}
+		i++;
+		j--;
+	}
+	return true;
+};
