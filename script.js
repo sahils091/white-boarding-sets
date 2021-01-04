@@ -1413,3 +1413,23 @@ var isPalindrome = function(x) {
 	}
 	return true;
 };
+
+
+//leet code median Array
+
+var findMedianSortedArrays = function(nums1, nums2) {
+  let mergedArr = [...nums1, ...nums2].sort((a,b) => a - b);
+  
+  // odd length
+  if (mergedArr.length % 2 > 0) {
+      return mergedArr[Math.floor(mergedArr.length / 2)];
+  }
+  
+  // even length
+  let right = mergedArr[Math.floor(mergedArr.length / 2)];
+  let left = mergedArr[Math.floor(mergedArr.length / 2) - 1];
+
+  let median = (right + left) / 2;
+  
+  return median;
+};
