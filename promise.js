@@ -101,10 +101,24 @@ function elfOne() {
   let name = 'Elf One';
   return new Promise((resolve, reject) => {
     // TODO: Fix and complete the Elf functionality below, in this Promise
-    getMaterials(name, getLazyElfSuccess).catch((err) => {
-      console.error(`${name}: stopped making gift.`);
-      reject();
-    });
+    getMaterials(name, getEagerElfSuccess)
+      .then(() => {
+        /* TODO: Ready for a next task if the previous one succeeded */
+        buildToy(name,getEagerElfSuccess)
+        
+      })
+      .then(() => {
+        /* TODO: When all tasks are completed use the resolve function to sign off on the toy */
+        qualityControl(name,getEagerElfSuccess)
+        
+      }).then(()=>{
+        personalizeToy(name, getEagerElfSuccess)
+        resolve()
+       })
+      .catch(null, (err) => {
+        console.error(`${name}: stopped making gift.`);
+        reject();
+      });
   });
 }
 
@@ -112,10 +126,24 @@ function elfTwo() {
   let name = 'Elf Two';
   return new Promise((resolve, reject) => {
     // TODO: Fix and complete the Elf functionality below, in this Promise
-    getMaterials(name, getChaosElfSuccess).catch((err) => {
-      console.error(`${name}: stopped making gift.`);
-      reject();
-    });
+    getMaterials(name, getEagerElfSuccess)
+      .then(() => {
+        /* TODO: Ready for a next task if the previous one succeeded */
+        buildToy(name,getEagerElfSuccess)
+        
+      })
+      .then(() => {
+        /* TODO: When all tasks are completed use the resolve function to sign off on the toy */
+        qualityControl(name,getEagerElfSuccess)
+        
+      }).then(()=>{
+        personalizeToy(name, getEagerElfSuccess)
+        resolve()
+       })
+      .catch(null, (err) => {
+        console.error(`${name}: stopped making gift.`);
+        reject();
+      });
   });
 }
 
@@ -126,10 +154,17 @@ function elfThree() {
     getMaterials(name, getEagerElfSuccess)
       .then(() => {
         /* TODO: Ready for a next task if the previous one succeeded */
+        buildToy(name,getEagerElfSuccess)
+        
       })
       .then(() => {
         /* TODO: When all tasks are completed use the resolve function to sign off on the toy */
-      })
+        qualityControl(name,getEagerElfSuccess)
+        
+      }).then(()=>{
+        personalizeToy(name, getEagerElfSuccess)
+        resolve()
+       })
       .catch(null, (err) => {
         console.error(`${name}: stopped making gift.`);
         reject();
