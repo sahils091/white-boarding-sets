@@ -1433,3 +1433,43 @@ var findMedianSortedArrays = function(nums1, nums2) {
   
   return median;
 };
+
+
+class Journal  {
+constructor(name, entries){
+  this.name = name;
+  this.entries = [entries]
+}
+}
+
+const NewHournal = new Journal('Morning' ,'[one, Two, THree]')
+
+console.log(NewHournal);
+
+class Entry extends Journal {
+  constructor (title, content, author) {
+    super()
+    this.title = title;
+    this.content = content;
+    this.author = author;
+  }
+addEntry(){
+let entry = {
+  title: this.title,
+  content: this.content,
+  author: this.author
+}
+this.entries.push(entry)
+}
+
+}
+
+const NewEntry = new Entry('sports', 'trying this out', 'Sahil Singh');
+
+console.log(NewEntry);
+
+const journalWithEntry = new Journal ('IS it sports', NewEntry);
+console.log(journalWithEntry)
+NewEntry.addEntry();
+const journalWithEntry1 = new Journal ('IS it sports');
+console.log(journalWithEntry1)
