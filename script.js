@@ -1473,3 +1473,14 @@ console.log(journalWithEntry)
 NewEntry.addEntry();
 const journalWithEntry1 = new Journal ('IS it sports');
 console.log(journalWithEntry1)
+
+
+const isPalindrome = x => {
+  const str = x.toString();
+  if (str.includes('-')) return false;
+  const isNotPalindrome = str
+    .split('')
+    .reverse()
+    .some((cur, index) => cur !== str[index]);
+  return !isNotPalindrome;
+};
