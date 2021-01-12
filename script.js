@@ -1484,3 +1484,19 @@ const isPalindrome = x => {
     .some((cur, index) => cur !== str[index]);
   return !isNotPalindrome;
 };
+
+
+
+const  removeNthFromEnd = (head, n) => {
+  function findLen(node) {
+      if(!node) return 0;
+      return findLen(node.next) + 1;
+  }
+  
+  const len = findLen(head);
+  let idx = len - n - 1, curr = head;
+  if(idx < 0) return head.next
+  while(idx--) curr = curr.next;
+  curr.next = curr.next.next;
+  return head;
+};
