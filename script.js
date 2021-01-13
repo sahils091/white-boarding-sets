@@ -1500,3 +1500,29 @@ const  removeNthFromEnd = (head, n) => {
   curr.next = curr.next.next;
   return head;
 };
+
+
+//Given an input string (s) and a pattern (p), implement regular expression matching with support for '.' and '*' where: 
+
+// '.' Matches any single character.​​​​
+// '*' Matches zero or more of the preceding element.
+// The matching should cover the entire input string (not partial).
+
+
+const isMatch = function(s, p) {
+  let reg=new RegExp("^"+p+"$");
+  return reg.test(s);
+  };
+
+//Test Cases
+
+  //"aa"
+// "a"
+// "aa"
+// "a*"
+// "ab"
+// ".*"
+// "aab"
+// "c*a*b"
+// "mississippi"
+// "mis*is*p*."
